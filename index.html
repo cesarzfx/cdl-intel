@@ -9,10 +9,112 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+
     <nav>
+        <div class="nav-brand"><span>CDL</span> Intel</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="nav-close-label" for="nav-toggle" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
     </nav>
 
+    <ul class="mobile-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="events.html">Events</a></li>
+    </ul>
+
+    <label class="nav-backdrop" for="nav-toggle" aria-hidden="true"></label>
+
+    <!-- MAIN -->
+    <main>
+
+        <div class="section-band">
+            <section class="section">
+                <h2 class="section-title">What is the <span>CDL?</span></h2>
+                <div class="divider"></div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fa-solid fa-crosshairs about-icon"></i>
+                        <h3>The League</h3>
+                        <p>The Call of Duty League is the premier professional esports competition for Call of Duty. Twelve city-based franchise teams compete across a season of Majors, with the top performers advancing to the World Championship.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-trophy about-icon"></i>
+                        <h3>The Format</h3>
+                        <p>The 25-26 season features four Majors held across the globe, followed by the League Championship. Each Major sees teams battle through group stages and bracket play to crown an event winner.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-earth-americas about-icon"></i>
+                        <h3>The Teams</h3>
+                        <p>From North America to Europe and the Middle East, the CDL brings together the world's best competitive Call of Duty players under 12 iconic franchise banners.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Season Snapshot -->
+        <section class="season-band">
+            <div class="section">
+                <h2 class="section-title">25-26 Season <span>Snapshot</span></h2>
+                <div class="divider"></div>
+                <div class="snapshot-grid">
+                    <div class="snapshot-stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label"><i class="fa-solid fa-shield-halved"></i> Franchise Teams</span>
+                    </div>
+                    <div class="snapshot-stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label"><i class="fa-solid fa-calendar-days"></i> Events This Season</span>
+                    </div>
+                    <div class="snapshot-stat">
+                        <span class="stat-number">48</span>
+                        <span class="stat-label"><i class="fa-solid fa-user"></i> Pro Players</span>
+                    </div>
+                    <div class="snapshot-stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label"><i class="fa-solid fa-earth-americas"></i> Countries Hosting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <div class="section-band">
+            <section class="section">
+                <h2 class="section-title">Explore the <span>Season</span></h2>
+                <div class="divider"></div>
+                <div class="quicklinks-grid">
+                    <a href="teams.html" class="quicklink-card">
+                        <i class="fa-solid fa-shield-halved quicklink-icon"></i>
+                        <h3>Teams</h3>
+                        <p>Explore all 12 franchises and their 25-26 rosters. Click each card to reveal the full squad.</p>
+                        <span class="quicklink-cta">View Teams <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="events.html" class="quicklink-card">
+                        <i class="fa-solid fa-calendar-days quicklink-icon"></i>
+                        <h3>Events</h3>
+                        <p>Track every Major from Birmingham to Paris, and make your predictions for the upcoming season.</p>
+                        <span class="quicklink-cta">View Events <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer>
+        <p>&copy; 2025-2026 Call of Duty League. All rights reserved. | Fan-made project for educational purposes.</p>
     </footer>
 
 </body>
