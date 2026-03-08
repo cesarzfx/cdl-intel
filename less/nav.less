@@ -1,0 +1,159 @@
+//  Main Nav 
+nav {
+    background-color: @nav-bg;
+    height: @nav-height;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid @cdl-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 @spacing-lg;
+
+    .nav-brand {
+        font-family: @font-primary;
+        font-size: 1.6rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: @light-text;
+
+        span {
+            color: @cdl-red;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: @spacing-lg;
+        list-style: none;
+
+        li a {
+            font-family: @font-secondary;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: @light-text-sub;
+            padding: @spacing-sm @spacing-md;
+            border-bottom: 2px solid transparent;
+            transition: all @transition-fast;
+
+            &:hover {
+                color: @light-text;
+                border-bottom-color: @cdl-red;
+            }
+
+            &.active {
+                color: @light-text;
+                border-bottom-color: @cdl-red;
+            }
+        }
+    }
+}
+
+//  HAMBURGER — Pure CSS checkbox pattern
+
+.nav-toggle {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.nav-toggle-label {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1001;
+    color: @light-text;
+    font-size: 1.3rem;
+}
+
+.nav-close-label {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1001;
+    color: @light-text;
+    font-size: 1.3rem;
+}
+
+.nav-toggle:checked ~ nav .nav-toggle-label {
+    display: none;
+}
+
+.nav-toggle:checked ~ nav .nav-close-label {
+    display: flex;
+}
+
+//  Mobile slide-in panel
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: @nav-height;
+    left: 0;
+    width: 100%;
+    background-color: @light-surface;
+    border-bottom: 2px solid @cdl-red;
+    z-index: 999;
+    flex-direction: column;
+    padding: @spacing-md 0;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height @transition-med;
+
+    li {
+        border-bottom: 1px solid @light-border;
+
+        a {
+            display: block;
+            font-family: @font-secondary;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: @light-text-sub;
+            padding: @spacing-md @spacing-lg;
+            transition: all @transition-fast;
+
+            &:hover,
+            &.active {
+                color: @light-text;
+                background-color: @light-border;
+                padding-left: calc(@spacing-lg + 8px);
+                border-left: 3px solid @cdl-red;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.nav-toggle:checked ~ .mobile-menu {
+    max-height: 400px;
+    display: flex;
+}
+
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.nav-toggle:checked ~ .nav-backdrop {
+    display: block;
+}
