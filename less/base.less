@@ -1,0 +1,274 @@
+//  BASE STYLES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @primary-bg;
+    color: @primary-text;
+    font-family: @font-body;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: @font-primary;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.3rem; }
+
+p {
+    font-family: @font-body;
+    font-weight: 300;
+    color: @secondary-text;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: @primary-text;
+    transition: color @transition-fast;
+
+    &:hover {
+        color: @cdl-red;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section {
+    padding: @spacing-xl @spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-intro {
+    text-align: center;
+    font-family: @font-body;
+    font-size: 1rem;
+    color: @secondary-text;
+    max-width: 60ch;
+    margin: 0 auto @spacing-md;
+    line-height: 1.7;
+}
+
+.section-title {
+    font-family: @font-primary;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: @spacing-lg;
+    text-align: center;
+    color: @primary-text;
+
+    span {
+        color: @cdl-red;
+    }
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background-color: @cdl-red;
+    margin: @spacing-md auto @spacing-lg auto;
+}
+
+footer {
+    background-color: @light-surface;
+    border-top: 2px solid @cdl-red;
+    text-align: center;
+    padding: @spacing-lg;
+    margin-top: 0;
+
+    p {
+        font-size: 0.85rem;
+        color: @light-text-sub;
+    }
+}
+
+.section-band {
+    background-color: @secondary-bg;
+    border-top: 1px solid @border-colour;
+    border-bottom: 1px solid @border-colour;
+    width: 100%;
+}
+
+//  HOME PAGE — About Grid
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-lg;
+    justify-content: center;
+}
+
+.about-card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: @card-bg;
+    border: 1px solid @border-colour;
+    border-top: 3px solid @cdl-red;
+    border-radius: @radius-lg;
+    padding: @spacing-lg;
+    text-align: center;
+
+    .about-icon {
+        font-size: 2rem;
+        color: @cdl-red;
+        margin-bottom: @spacing-md;
+        display: block;
+    }
+
+    h3 {
+        font-family: @font-primary;
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: @primary-text;
+        margin-bottom: @spacing-sm;
+    }
+
+    p {
+        font-size: 0.95rem;
+        color: @secondary-text;
+        line-height: 1.7;
+    }
+}
+
+//  HOME PAGE — Season Band + Snapshot Stats
+.season-band {
+    background-color: @light-surface;
+    border-top: 1px solid @light-border;
+    border-bottom: 1px solid @light-border;
+    padding: @spacing-md 0;
+
+    .section-title {
+        color: @light-text;
+    }
+
+    .section-intro {
+        color: @light-text-sub;
+    }
+}
+
+.snapshot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: @spacing-lg;
+}
+
+.snapshot-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: @spacing-sm;
+    min-width: 160px;
+
+    .stat-number {
+        font-family: @font-primary;
+        font-size: 4rem;
+        font-weight: 800;
+        color: @cdl-red;
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-family: @font-secondary;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: @light-text-sub;
+        text-align: center;
+
+        i {
+            margin-right: @spacing-xs;
+            color: @cdl-red;
+        }
+    }
+}
+
+//  HOME PAGE — Quick Links
+.quicklinks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-lg;
+    justify-content: center;
+}
+
+.quicklink-card {
+    flex: 1 1 300px;
+    max-width: 480px;
+    background-color: @card-bg;
+    border: 1px solid @border-colour;
+    border-top: 3px solid @cdl-red;
+    border-radius: @radius-lg;
+    padding: @spacing-lg;
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-sm;
+    transition: transform @transition-fast, box-shadow @transition-fast;
+    color: @primary-text;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+        text-decoration: none;
+    }
+
+    .quicklink-icon {
+        font-size: 2rem;
+        color: @cdl-red;
+    }
+
+    h3 {
+        font-family: @font-primary;
+        font-size: 1.6rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: @primary-text;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.95rem;
+        color: @secondary-text;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .quicklink-cta {
+        font-family: @font-secondary;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: @cdl-red;
+        margin-top: @spacing-sm;
+
+        i {
+            margin-left: @spacing-xs;
+            transition: transform @transition-fast;
+        }
+    }
+
+    &:hover .quicklink-cta i {
+        transform: translateX(4px);
+    }
+}
