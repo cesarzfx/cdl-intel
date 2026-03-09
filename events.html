@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDL Intel | Events</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+
+    <nav>
+        <div class="nav-brand"><span>CDL</span> Intel</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="events.html" class="active">Events</a></li>
+        </ul>
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="nav-close-label" for="nav-toggle" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+    </nav>
+
+    <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+    </ul>
+
+    <label class="nav-backdrop" for="nav-toggle" aria-hidden="true"></label>
+
+    <main>
+
+        <!--  MAJORS GRID  -->
+        <div class="section-band">
+            <section class="section">
+                <h2 class="section-title">25-26 <span>Majors</span></h2>
+                <p class="section-intro">Track every Major and the World Championship across the 25-26 CDL season.</p>
+                <div class="divider"></div>
+
+                <div class="events-grid">
+
+                    <div class="event-card completed">
+                        <div class="event-banner">
+                            <img src="images/events/major1.jpg" alt="Major I">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-status">Completed</span>
+                            <h3 class="event-name">Major I</h3>
+                            <div class="event-meta">
+                                <p><i class="fa-solid fa-trophy"></i> Winner: Paris Gentle Mates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card upcoming">
+                        <div class="event-banner">
+                            <img src="images/events/major2.jpg" alt="Major II">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-status">Upcoming</span>
+                            <h3 class="event-name">Major II</h3>
+                            <div class="event-meta">
+                                <p><i class="fa-solid fa-calendar-days"></i> Mar 27 – Mar 29, 2025</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Birmingham, United Kingdom</p>
+                                <p><i class="fa-solid fa-tag"></i> DreamHack Birmingham</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card upcoming">
+                        <div class="event-banner">
+                            <img src="images/events/major3.jpg" alt="Major III">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-status">Upcoming</span>
+                            <h3 class="event-name">Major III</h3>
+                            <div class="event-meta">
+                                <p><i class="fa-solid fa-calendar-days"></i> May 15 – May 17, 2025</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Atlanta, Georgia</p>
+                                <p><i class="fa-solid fa-tag"></i> DreamHack Atlanta</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card upcoming">
+                        <div class="event-banner">
+                            <img src="images/events/major4.jpg" alt="Major IV">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-status">Upcoming</span>
+                            <h3 class="event-name">Major IV</h3>
+                            <div class="event-meta">
+                                <p><i class="fa-solid fa-calendar-days"></i> Jun 25 – Jun 28, 2025</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Paris, France</p>
+                                <p><i class="fa-solid fa-tag"></i> Major IV Tournament</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card upcoming">
+                        <div class="event-banner">
+                            <img src="images/events/worlds.jpg" alt="World Championship">
+                        </div>
+                        <div class="event-body">
+                            <span class="event-status">Upcoming</span>
+                            <h3 class="event-name">World Championship</h3>
+                            <div class="event-meta">
+                                <p><i class="fa-solid fa-calendar-days"></i> Jul 16 – Jul 19, 2025</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Las Vegas, Nevada</p>
+                                <p><i class="fa-solid fa-tag"></i> League Championship</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!--  PREDICTION FORM  -->
+        <section class="section">
+
+            <input type="checkbox" class="form-toggle" id="form-toggle">
+
+            <label class="form-reveal-btn" for="form-toggle">
+                <i class="fa-solid fa-crosshairs"></i> Make Your Predictions
+            </label>
+
+            <div class="prediction-form-wrapper">
+                <div class="prediction-section">
+                    <label class="form-close-btn" for="form-toggle" aria-label="Close form">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+
+                    <h2 class="form-title">Make Your <span>Predictions</span></h2>
+                    <p class="form-subtitle">Who do you think will take Major II in Birmingham?</p>
+
+                    <form class="prediction-form" action="#" method="post">
+
+                        <!--  User Details  -->
+                        <p class="form-section-label"><i class="fa-solid fa-user"></i> Your Details</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fan-name">Your Name</label>
+                                <input type="text" id="fan-name" name="fan-name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="fan-team">Your Favourite Team</label>
+                                <select id="fan-team" name="fan-team">
+                                    <option value="" disabled selected>Select your team</option>
+                                    <option>Boston Breach</option>
+                                    <option>Carolina Royal Ravens</option>
+                                    <option>Cloud9</option>
+                                    <option>FaZe Vegas</option>
+                                    <option>G2 Minnesota</option>
+                                    <option>Los Angeles Thieves</option>
+                                    <option>Miami Heretics</option>
+                                    <option>OpTic Texas</option>
+                                    <option>Paris Gentle Mates</option>
+                                    <option>Riyadh Falcons</option>
+                                    <option>Toronto Koi</option>
+                                    <option>Vancouver Surge</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Are you a CDL fan?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="fan-type" value="yes"> Yes, I follow a team</label>
+                                <label><input type="radio" name="fan-type" value="casual"> Casual viewer</label>
+                                <label><input type="radio" name="fan-type" value="new"> New to CDL</label>
+                            </div>
+                        </div>
+
+                        <!--  User Major II Predictions  -->
+                        <p class="form-section-label"><i class="fa-solid fa-trophy"></i> Major II — Birmingham, UK</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="m2-champ">Predict Champion</label>
+                                <select id="m2-champ" name="m2-champ">
+                                    <option value="" disabled selected>Select a team</option>
+                                    <option>Boston Breach</option>
+                                    <option>Carolina Royal Ravens</option>
+                                    <option>Cloud9</option>
+                                    <option>FaZe Vegas</option>
+                                    <option>G2 Minnesota</option>
+                                    <option>Los Angeles Thieves</option>
+                                    <option>Miami Heretics</option>
+                                    <option>OpTic Texas</option>
+                                    <option>Paris Gentle Mates</option>
+                                    <option>Riyadh Falcons</option>
+                                    <option>Toronto Koi</option>
+                                    <option>Vancouver Surge</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="m2-mvp">Predict MVP</label>
+                                <select id="m2-mvp" name="m2-mvp">
+                                    <option value="" disabled selected>Select a player</option>
+                                    <optgroup label="Boston Breach"><option>Spart</option><option>Nastie</option><option>Purj</option><option>Snoopy</option></optgroup>
+                                    <optgroup label="Carolina Royal Ravens"><option>Craze</option><option>Exceed</option><option>Lurqxx</option><option>Nero</option></optgroup>
+                                    <optgroup label="Cloud9"><option>Encourage</option><option>Hide</option><option>Nejra</option><option>Okis</option></optgroup>
+                                    <optgroup label="FaZe Vegas"><option>04</option><option>Abuzah</option><option>Drazah</option><option>Simp</option></optgroup>
+                                    <optgroup label="G2 Minnesota"><option>Estereal</option><option>Kremp</option><option>Loony</option><option>Skyz</option></optgroup>
+                                    <optgroup label="Los Angeles Thieves"><option>aBeZy</option><option>HyDra</option><option>Nium</option><option>Scrap</option></optgroup>
+                                    <optgroup label="Miami Heretics"><option>MettalZ</option><option>RenKoR</option><option>SupeR</option><option>Traix</option></optgroup>
+                                    <optgroup label="OpTic Texas"><option>Dashy</option><option>Huke</option><option>Mercules</option><option>Shotzzy</option></optgroup>
+                                    <optgroup label="Paris Gentle Mates"><option>Envoy</option><option>Ghosty</option><option>Sib</option><option>Neptune</option></optgroup>
+                                    <optgroup label="Riyadh Falcons"><option>Cellium</option><option>Exnid</option><option>KiSMET</option><option>Pred</option></optgroup>
+                                    <optgroup label="Toronto Koi"><option>CleanX</option><option>Insight</option><option>Kips</option><option>JoeDeceives</option></optgroup>
+                                    <optgroup label="Vancouver Surge"><option>Capsidal</option><option>Gwinn</option><option>Lunarz</option><option>TJHaLy</option></optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Predictions
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--  FOOTER  -->
+    <footer>
+        <p>&copy; 2025-2026 Call of Duty League. All rights reserved. | Fan-made project for educational purposes.</p>
+    </footer>
+
+</body>
+</html>
