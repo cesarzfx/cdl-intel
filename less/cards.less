@@ -1,0 +1,214 @@
+//  Teams Flex Container 
+.teams-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: @spacing-lg;
+    padding: @spacing-lg 0;
+}
+
+//  FLIP CARDS — Teams Page
+.flip-card {
+    width: @card-width;
+    height: @flip-card-height;
+    position: relative;
+}
+
+.flip-card__toggle {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform @transition-slow;
+    transform-style: preserve-3d;
+}
+
+@media (hover: none) {
+    .flip-card__toggle:checked ~ .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-back .flip-card__back-btn {
+        display: none;
+    }
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: @radius-lg;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: @spacing-lg;
+}
+
+//  Front face
+.flip-card-front {
+    background-color: @card-bg;
+    border: 1px solid @border-colour;
+    cursor: pointer;
+
+    .team-logo {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: @spacing-md;
+        filter: drop-shadow(0 0 12px rgba(255,255,255,0.1));
+    }
+
+    .team-location {
+        font-family: @font-secondary;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: @secondary-text;
+        margin-bottom: @spacing-xs;
+    }
+
+    .team-name {
+        font-family: @font-primary;
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        color: @primary-text;
+    }
+}
+
+//  Back face
+.flip-card-back {
+    background-color: @secondary-bg;
+    transform: rotateY(180deg);
+    border: 1px solid @border-colour;
+    justify-content: flex-start;
+    padding-top: @spacing-lg;
+
+    .flip-card__back-btn {
+        position: absolute;
+        top: @spacing-sm;
+        right: @spacing-sm;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background @transition-fast;
+
+        i {
+            font-size: 14px;
+            color: @primary-text;
+        }
+
+        &:hover {
+            background: rgba(255,255,255,0.18);
+        }
+    }
+
+    .back-title {
+        font-family: @font-primary;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: @spacing-md;
+        text-align: center;
+    }
+
+    .roster-preview {
+        margin-top: @spacing-md;
+        width: 100%;
+
+        h4 {
+            font-family: @font-secondary;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: @secondary-text;
+            margin-bottom: @spacing-sm;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+
+            li {
+                font-family: @font-primary;
+                font-size: 1.1rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: @primary-text;
+                padding: @spacing-sm 0;
+                border-bottom: 1px solid @border-colour;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+//  Per-team accent colors
+.flip-card {
+    &.boston .flip-card-front   { border-top: 3px solid @boston-green; }
+    &.boston .flip-card-back    { border-top: 3px solid @boston-green; .back-title { color: @boston-green; } }
+
+    &.ravens .flip-card-front   { border-top: 3px solid @ravens-blue; }
+    &.ravens .flip-card-back    { border-top: 3px solid @ravens-blue; .back-title { color: @ravens-blue; } }
+
+    &.cloud9 .flip-card-front   { border-top: 3px solid @cloud9-cyan; }
+    &.cloud9 .flip-card-back    { border-top: 3px solid @cloud9-cyan; .back-title { color: @cloud9-cyan; } }
+
+    &.faze .flip-card-front     { border-top: 3px solid @faze-pink; }
+    &.faze .flip-card-back      { border-top: 3px solid @faze-pink; .back-title { color: @faze-pink; } }
+
+    &.g2 .flip-card-front       { border-top: 3px solid @g2-purple; }
+    &.g2 .flip-card-back        { border-top: 3px solid @g2-purple; .back-title { color: @g2-purple; } }
+
+    &.thieves .flip-card-front  { border-top: 3px solid @thieves-red; }
+    &.thieves .flip-card-back   { border-top: 3px solid @thieves-red; .back-title { color: @thieves-red; } }
+
+    &.heretics .flip-card-front { border-top: 3px solid @heretics-orange; }
+    &.heretics .flip-card-back  { border-top: 3px solid @heretics-orange; .back-title { color: @heretics-orange; } }
+
+    &.optic .flip-card-front    { border-top: 3px solid @optic-green; }
+    &.optic .flip-card-back     { border-top: 3px solid @optic-green; .back-title { color: @optic-green; } }
+
+    &.gentlemates .flip-card-front { border-top: 3px solid @gentlemates-pink; }
+    &.gentlemates .flip-card-back  { border-top: 3px solid @gentlemates-pink; .back-title { color: @gentlemates-pink; } }
+
+    &.falcons .flip-card-front  { border-top: 3px solid @falcons-green; }
+    &.falcons .flip-card-back   { border-top: 3px solid @falcons-green; .back-title { color: @falcons-green; } }
+
+    &.koi .flip-card-front      { border-top: 3px solid @koi-purple; }
+    &.koi .flip-card-back       { border-top: 3px solid @koi-purple; .back-title { color: @koi-purple; } }
+
+    &.surge .flip-card-front    { border-top: 3px solid @surge-teal; }
+    &.surge .flip-card-back     { border-top: 3px solid @surge-teal; .back-title { color: @surge-teal; } }
+}
