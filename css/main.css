@@ -636,3 +636,283 @@ nav .nav-links li a.active {
 .flip-card.surge .flip-card-back .back-title {
   color: #00CED1;
 }
+.events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 0;
+}
+.event-card {
+  width: 340px;
+  background-color: #1E2D3D;
+  border: 1px solid #243447;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.event-card.completed {
+  border-top: 3px solid #FF0000;
+}
+.event-card.completed .event-status {
+  background-color: #FF0000;
+  color: #E0E6ED;
+}
+.event-card.upcoming {
+  border-top: 3px solid #8A9BB0;
+}
+.event-card.upcoming .event-status {
+  background-color: #162030;
+  color: #8A9BB0;
+  border: 1px solid #243447;
+}
+.event-card .event-banner {
+  width: 100%;
+  height: 160px;
+  background-color: #162030;
+  overflow: hidden;
+  position: relative;
+}
+.event-card .event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.event-card .event-body {
+  padding: 16px;
+}
+.event-card .event-body .event-status {
+  display: inline-block;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.event-card .event-body .event-name {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #E0E6ED;
+  margin-bottom: 8px;
+}
+.event-card .event-body .event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.event-card .event-body .event-meta p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.9rem;
+  color: #8A9BB0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.event-card .event-body .event-meta p i {
+  color: #FF0000;
+  width: 16px;
+  text-align: center;
+}
+.form-toggle {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+.prediction-form-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+.form-toggle:checked ~ .prediction-form-wrapper {
+  max-height: 3000px;
+}
+.form-reveal-btn {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  background-color: #FF0000;
+  color: #E0E6ED;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 64px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin: 32px auto;
+}
+.form-reveal-btn:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+.form-reveal-btn i {
+  font-size: 1rem;
+}
+.form-toggle:checked ~ .form-reveal-btn {
+  display: none;
+}
+.form-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.form-close-btn i {
+  font-size: 1rem;
+  color: #E0E6ED;
+}
+.form-close-btn:hover {
+  background: #FF0000;
+}
+.prediction-section {
+  margin-top: 64px;
+  background-color: #162030;
+  border: 1px solid #243447;
+  border-radius: 12px;
+  padding: 64px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+.prediction-section .form-title {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #E0E6ED;
+}
+.prediction-section .form-title span {
+  color: #FF0000;
+}
+.prediction-section .form-subtitle {
+  text-align: center;
+  color: #8A9BB0;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+.prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.prediction-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.prediction-form .form-group label {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8A9BB0;
+}
+.prediction-form .form-group input[type="text"],
+.prediction-form .form-group select {
+  background-color: #1E2D3D;
+  border: 1px solid #243447;
+  border-radius: 4px;
+  color: #E0E6ED;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+.prediction-form .form-group input[type="text"]:focus,
+.prediction-form .form-group select:focus {
+  border-color: #FF0000;
+}
+.prediction-form .form-group input[type="text"] option,
+.prediction-form .form-group select option {
+  background-color: #1E2D3D;
+  color: #E0E6ED;
+}
+.prediction-form .form-group .radio-group {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.prediction-form .form-group .radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  color: #E0E6ED;
+  cursor: pointer;
+}
+.prediction-form .form-group .radio-group label input[type="radio"] {
+  accent-color: #FF0000;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.prediction-form .form-row {
+  display: flex;
+  gap: 16px;
+}
+.prediction-form .form-row .form-group {
+  flex: 1;
+}
+.prediction-form .form-section-label {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FF0000;
+  padding-top: 16px;
+  border-top: 1px solid #243447;
+  margin-top: 8px;
+}
+.prediction-form .btn-submit {
+  background-color: #FF0000;
+  color: #E0E6ED;
+  border-radius: 4px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 64px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  align-self: center;
+  width: 100%;
+}
+.prediction-form .btn-submit:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+.prediction-form .btn-submit:active {
+  transform: translateY(0);
+}
