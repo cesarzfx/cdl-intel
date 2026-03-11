@@ -7,7 +7,7 @@ A multi-page fan site covering the 2025-26 Call of Duty League season. Built as 
 ## Live Site
 
 You can view the live website here:  
-👉 https://cesarzfx.github.io/css-techniques/
+👉 https://cesarzfx.github.io/cdl-intel/
 
 ---
 
