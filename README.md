@@ -45,9 +45,9 @@ cdl-intel/
 ├── images/
 │   └── events/         
 ├── planning/
-│   ├── ContentIntegration.docx       
+│   ├── ContentIntegration.pdf       
 │   ├── TopicOutline.pdf  
-│   └── Wireframes.docx       
+│   └── Wireframes.pdf       
 └── README.md           — Project documentation
 ```
 
