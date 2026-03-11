@@ -1,7 +1,5 @@
 # cdl-intel
 
-# CDL Intel
-
 A multi-page fan site covering the 2025-26 Call of Duty League season. Built as a mid-term web design project demonstrating responsive layout, advanced CSS techniques, and interactive UI.
 
 ## Live Site
